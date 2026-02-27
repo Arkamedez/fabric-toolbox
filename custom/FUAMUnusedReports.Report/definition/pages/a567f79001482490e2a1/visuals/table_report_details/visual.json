@@ -1,0 +1,372 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "table_report_details",
+  "position": {
+    "x": 16,
+    "y": 186,
+    "z": 2000,
+    "height": 518,
+    "width": 1248,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "WorkspaceName"
+                }
+              },
+              "queryRef": "workspaces.WorkspaceName",
+              "nativeQueryRef": "Workspace"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reports"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "reports.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metrics"
+                    }
+                  },
+                  "Property": "# Viewed Reports 30d"
+                }
+              },
+              "queryRef": "Metrics.# Viewed Reports 30d",
+              "nativeQueryRef": "Views (30d)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metrics"
+                    }
+                  },
+                  "Property": "# Viewed Reports 14d"
+                }
+              },
+              "queryRef": "Metrics.# Viewed Reports 14d",
+              "nativeQueryRef": "Views (14d)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metrics"
+                    }
+                  },
+                  "Property": "# Viewed Reports (Activities)"
+                }
+              },
+              "queryRef": "Metrics.# Viewed Reports (Activities)",
+              "nativeQueryRef": "Views (All Time)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "active_items"
+                    }
+                  },
+                  "Property": "lastUpdatedDate"
+                }
+              },
+              "queryRef": "active_items.lastUpdatedDate",
+              "nativeQueryRef": "Last Updated"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "capacities"
+                    }
+                  },
+                  "Property": "displayName"
+                }
+              },
+              "queryRef": "capacities.displayName",
+              "nativeQueryRef": "Capacity"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Report Usage Details  ·  Sort by Views (30d) ↑ to surface unused reports'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2b0e70b044860755e2a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "workspaces"
+              }
+            },
+            "Property": "WorkspaceName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0df1301d4adc8608e060",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metrics"
+              }
+            },
+            "Property": "# Viewed Reports 30d"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "115a927fd479c967c7a6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metrics"
+              }
+            },
+            "Property": "# Viewed Reports 14d"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8fce394c400ad8ca632e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metrics"
+              }
+            },
+            "Property": "# Viewed Reports (Activities)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4c3b6d56810253b6083e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "active_items"
+              }
+            },
+            "Property": "lastUpdatedDate"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f85e7dba93160a2208b3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "capacities"
+              }
+            },
+            "Property": "displayName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ca835dab0aa410606404",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reports"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

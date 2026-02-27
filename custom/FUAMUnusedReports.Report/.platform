@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FUAMUnusedReports"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f6814709-8138-413c-a8bc-70be502efd4a"
+  }
+}

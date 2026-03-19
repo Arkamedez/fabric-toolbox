@@ -68,8 +68,8 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | Element | Font | Weight | Size | Color |
 |---|---|---|---|---|
 | **Page Title** | Arial | Bold | 16–20px | `#C8353D` |
-| **Visual Title** | Arial | Bold | 12–14px | `#000000` |
-| **Section Header** | Arial | Bold | 12px | `#1282C6` |
+| **Visual Title** | Arial | Bold | 12–14px | `#1E9FD3` |
+| **Section Header** | Arial | Bold | 12px | `#1E9FD3` |
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
 | **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
 | **Data Labels** | Arial | Regular | 10px | `#BFBFBF` |
@@ -88,7 +88,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ```
 ┌──────────────────────────┐
-│  [Visual Title]          │  Arial Bold 12px #000000
+│  [Visual Title]          │  Arial Bold 12px #1E9FD3
 │                          │
 │       1,234              │  Arial Bold 28px #C8353D
 │    Total Revenue         │  Arial Regular 11px #BFBFBF
@@ -145,10 +145,10 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Element | Specification |
 |---|---|
-| Header text | Arial Bold 11px, `#C8353D` |
+| Header text | Arial Bold 11px, `#1E9FD3` |
 | Header outline | Bottom only |
 | Item text | Arial Regular 11px, `#000000` |
-| Outline color | `#C8353D`, weight 1px |
+| Outline color | `#1E9FD3`, weight 1px |
 | Background | `#FFFFFF` |
 
 ### 4.6 Gauge

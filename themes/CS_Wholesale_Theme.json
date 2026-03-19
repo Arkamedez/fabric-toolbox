@@ -31,7 +31,7 @@
     "*": {
       "*": {
         "visualHeader": [{
-          "foreground": { "solid": { "color": "#C8353D" } }
+          "foreground": { "solid": { "color": "#1E9FD3" } }
         }],
         "outspacePane": [{
           "checkboxAndApplyColor": { "solid": { "color": "#C8353D" } }
@@ -39,7 +39,7 @@
         "title": [{
           "fontFamily": "Arial",
           "fontSize": 12,
-          "fontColor": { "solid": { "color": "#000000" } },
+          "fontColor": { "solid": { "color": "#1E9FD3" } },
           "show": true
         }],
         "background": [{
@@ -350,7 +350,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#C8353D" } },
+          "backColor": { "solid": { "color": "#1E9FD3" } },
           "outline": "BottomOnly",
           "alignment": "Left",
           "wordWrap": true
@@ -386,7 +386,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#C8353D" } },
+          "backColor": { "solid": { "color": "#1E9FD3" } },
           "outline": "BottomOnly",
           "wordWrap": true
         }],
@@ -436,12 +436,12 @@
           "show": true,
           "fontFamily": "Arial",
           "fontSize": 11,
-          "fontColor": { "solid": { "color": "#C8353D" } },
+          "fontColor": { "solid": { "color": "#1E9FD3" } },
           "background": { "solid": { "color": "#FFFFFF" } },
           "outline": "BottomOnly"
         }],
         "general": [{
-          "outlineColor": { "solid": { "color": "#C8353D" } },
+          "outlineColor": { "solid": { "color": "#1E9FD3" } },
           "outlineWeight": 1
         }]
       }
@@ -525,7 +525,7 @@
     "shape": {
       "*": {
         "line": [{
-          "lineColor": { "solid": { "color": "#C8353D" } }
+          "lineColor": { "solid": { "color": "#1E9FD3" } }
         }]
       }
     },
@@ -548,12 +548,12 @@
       "fontSize": 28
     },
     "title": {
-      "color": "#C8353D",
+      "color": "#1E9FD3",
       "fontFace": "Arial",
       "fontSize": 12
     },
     "header": {
-      "color": "#1282C6",
+      "color": "#1E9FD3",
       "fontFace": "Arial"
     }
   }

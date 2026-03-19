@@ -14,8 +14,8 @@ These are the **primary brand colors** used for UI chrome, headers, navigation, 
 
 | Role | Name | Hex | Pantone | Usage |
 |---|---|---|---|---|
-| **Primary** | C&S Red | `#d2232a` | 1795 C | Logo, primary actions, headers, active states, alerts |
-| **Secondary** | Corporate Gray | `#58595b` | Cool Gray 9 C | Body text, secondary elements, axis labels, borders |
+| **Primary** | C&S Red | `#C8353D` | 1795 C | Logo, primary actions, headers, active states, alerts |
+| **Secondary** | Corporate Gray | `#BFBFBF` | Cool Gray 9 C | Body text, secondary elements, axis labels, borders |
 | **Text** | Black | `#000000` | — | Body copy, data values, maximum readability contexts |
 | **Background** | White | `#FFFFFF` | — | Page backgrounds, card surfaces, clean space |
 
@@ -38,14 +38,14 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Order | Name | Hex | Pantone | Primary Use |
 |---|---|---|---|---|
-| 1 | Red | `#d2232a` | 1795 C | Default / first series |
+| 1 | Red | `#C8353D` | 1795 C | Default / first series |
 | 2 | Blue | `#005a9c` | 293 C | Second series, totals, secondary KPIs |
 | 3 | Lime Green | `#c4d600` | 382 C | Third series, positive indicators |
 | 4 | Purple | `#6a2a8d` | 268 C | Fourth series, categorical contrast |
 | 5 | Orange | `#e87722` | 158 C | Fifth series, warnings |
 | 6 | Cyan | `#00a9e0` | Process Blue C | Sixth series, informational |
 | 7 | Dark Green | `#00843d` | 355 C | Seventh series, success states |
-| 8 | Gray | `#58595b` | Cool Gray 9 C | Eighth series, neutral/baseline |
+| 8 | Gray | `#BFBFBF` | Cool Gray 9 C | Eighth series, neutral/baseline |
 
 ### Semantic Colors
 
@@ -53,9 +53,9 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 |---|---|---|
 | ✅ Good / Positive | Dark Green | `#00843d` |
 | ⚠️ Neutral / Info | Blue | `#005a9c` |
-| ❌ Bad / Negative | Red | `#d2232a` |
+| ❌ Bad / Negative | Red | `#C8353D` |
 | ▲ Increase (waterfall) | Dark Green | `#00843d` |
-| ▼ Decrease (waterfall) | Red | `#d2232a` |
+| ▼ Decrease (waterfall) | Red | `#C8353D` |
 | ■ Total (waterfall) | Blue | `#005a9c` |
 
 ---
@@ -67,17 +67,17 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Element | Font | Weight | Size | Color |
 |---|---|---|---|---|
-| **Page Title** | Arial | Bold | 16–20px | `#d2232a` |
+| **Page Title** | Arial | Bold | 16–20px | `#C8353D` |
 | **Visual Title** | Arial | Bold | 12–14px | `#000000` |
 | **Section Header** | Arial | Bold | 12px | `#005a9c` |
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
-| **Axis Labels** | Arial | Regular | 10px | `#58595b` |
-| **Data Labels** | Arial | Regular | 10px | `#58595b` |
-| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#d2232a` |
+| **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
+| **Data Labels** | Arial | Regular | 10px | `#BFBFBF` |
+| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#C8353D` |
 | **Table Values** | Arial | Regular | 10px | `#000000` |
-| **Callout / KPI** | Arial | Bold | 28px | `#d2232a` |
-| **Category Label** | Arial | Regular | 11px | `#58595b` |
-| **Legend** | Arial | Regular | 10px | `#58595b` |
+| **Callout / KPI** | Arial | Bold | 28px | `#C8353D` |
+| **Category Label** | Arial | Regular | 11px | `#BFBFBF` |
+| **Legend** | Arial | Regular | 10px | `#BFBFBF` |
 | **Tooltip** | Arial | Regular | 10px | `#000000` |
 
 ---
@@ -90,8 +90,8 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 ┌──────────────────────────┐
 │  [Visual Title]          │  Arial Bold 12px #000000
 │                          │
-│       1,234              │  Arial Bold 28px #d2232a
-│    Total Revenue         │  Arial Regular 11px #58595b
+│       1,234              │  Arial Bold 28px #C8353D
+│    Total Revenue         │  Arial Regular 11px #BFBFBF
 │                          │
 └──────────────────────────┘
   Background: #FFFFFF
@@ -104,7 +104,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ```
 ┌──────────────┬────────────┬───────────┐
-│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #d2232a, Arial Bold 11px
+│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #C8353D, Arial Bold 11px
 ├──────────────┼────────────┼───────────┤
 │  Data Row 1  │  value     │  value    │  Row: #000000 on #FFFFFF, Arial 10px
 │  Data Row 2  │  value     │  value    │  Alt Row: #000000 on #F2F2F2
@@ -113,7 +113,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 │  Total       │  value     │  value    │  Total: #FFFFFF on #005a9c, Arial Bold 11px
 └──────────────┴────────────┴───────────┘
   Gridlines: #E6E6E6
-  Outline: #58595b
+  Outline: #BFBFBF
   Row Padding: 4px
 ```
 
@@ -121,7 +121,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Part | Font | Size | Foreground | Background |
 |---|---|---|---|---|
-| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#d2232a` |
+| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#C8353D` |
 | Row Headers | Arial Bold | 11px | `#FFFFFF` | `#005a9c` |
 | Values | Arial Regular | 10px | `#000000` | `#FFFFFF` |
 | Subtotals | Arial Bold | 10px | `#000000` | `#F2F2F2` |
@@ -131,13 +131,13 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Element | Specification |
 |---|---|
-| Default bar/column fill | `#d2232a` (cycles through `dataColors` for multi-series) |
-| Axis label color | `#58595b` |
+| Default bar/column fill | `#C8353D` (cycles through `dataColors` for multi-series) |
+| Axis label color | `#BFBFBF` |
 | Axis label font | Arial Regular 10px |
 | Gridline color | `#E6E6E6` |
 | Gridlines visible | Yes (value axis only) |
-| Legend text | Arial Regular 10px, `#58595b` |
-| Data label text | Arial Regular 10px, `#58595b` |
+| Legend text | Arial Regular 10px, `#BFBFBF` |
+| Data label text | Arial Regular 10px, `#BFBFBF` |
 | Line stroke width | 2px |
 | Background | `#FFFFFF` |
 
@@ -145,29 +145,29 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Element | Specification |
 |---|---|
-| Header text | Arial Bold 11px, `#d2232a` |
+| Header text | Arial Bold 11px, `#C8353D` |
 | Header outline | Bottom only |
 | Item text | Arial Regular 11px, `#000000` |
-| Outline color | `#d2232a`, weight 1px |
+| Outline color | `#C8353D`, weight 1px |
 | Background | `#FFFFFF` |
 
 ### 4.6 Gauge
 
 | Element | Specification |
 |---|---|
-| Fill arc | `#d2232a` |
-| Target marker | `#58595b` |
+| Fill arc | `#C8353D` |
+| Target marker | `#BFBFBF` |
 | Callout value | Arial Bold 20px, `#000000` |
 
 ### 4.7 Navigation & Buttons
 
 | State | Background | Text | Border |
 |---|---|---|---|
-| **Primary** | `#d2232a` | `#FFFFFF` | none |
+| **Primary** | `#C8353D` | `#FFFFFF` | none |
 | **Primary Hover** | `#b01e24` | `#FFFFFF` | none |
-| **Secondary** | `#FFFFFF` | `#d2232a` | 1px `#d2232a` |
-| **Secondary Hover** | `#F2F2F2` | `#d2232a` | 1px `#d2232a` |
-| **Disabled** | `#E6E6E6` | `#58595b` | none |
+| **Secondary** | `#FFFFFF` | `#C8353D` | 1px `#C8353D` |
+| **Secondary Hover** | `#F2F2F2` | `#C8353D` | 1px `#C8353D` |
+| **Disabled** | `#E6E6E6` | `#BFBFBF` | none |
 
 ---
 
@@ -187,7 +187,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 ## 6. Accessibility Notes
 
 - All body text must be **Black** (`#000000`) on white backgrounds for maximum contrast
-- White text on Red (`#d2232a`) and Blue (`#005a9c`) backgrounds meets **WCAG AA** contrast (4.5:1+)
+- White text on Red (`#C8353D`) and Blue (`#005a9c`) backgrounds meets **WCAG AA** contrast (4.5:1+)
 - Lime Green (`#c4d600`) should only be used for filled shapes, **not** for text on white (fails contrast)
 - Avoid using color alone to convey meaning — always pair with labels or icons
 - Minimum font size: **10px** for any readable text
@@ -209,18 +209,18 @@ The companion Power BI theme JSON implementing this spec is available at:
 ```
 CORPORATE                  SPLASH / DATA SERIES
 ─────────────              ──────────────────────
-#d2232a  Red (Primary)     #d2232a  Series 1
-#58595b  Gray              #005a9c  Series 2
+#C8353D  Red (Primary)     #C8353D  Series 1
+#BFBFBF  Gray              #005a9c  Series 2
 #000000  Black             #c4d600  Series 3
 #FFFFFF  White             #6a2a8d  Series 4
                            #e87722  Series 5
 SURFACES                   #00a9e0  Series 6
 ──────────                 #00843d  Series 7
-#F2F2F2  Page BG           #58595b  Series 8
+#F2F2F2  Page BG           #BFBFBF  Series 8
 #E6E6E6  Borders
 #FFFFFF  Card BG           SEMANTIC
                            ────────
                            #00843d  Good / Increase
                            #005a9c  Neutral / Total
-                           #d2232a  Bad / Decrease
+                           #C8353D  Bad / Decrease
 ```

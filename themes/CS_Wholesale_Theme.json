@@ -474,12 +474,12 @@
     "waterfallChart": {
       "*": {
         "sentimentColors": [{
-          "increaseFill": { "solid": { "color": "#00843d" } },
-          "decreaseFill": { "solid": { "color": "#d2232a" } },
-          "totalFill": { "solid": { "color": "#005a9c" } }
+          "increaseFill": { "solid": { "color": "#1C6B27" } },
+          "decreaseFill": { "solid": { "color": "#C8353D" } },
+          "totalFill": { "solid": { "color": "#1282C6" } }
         }],
         "categoryAxis": [{
-          "labelColor": { "solid": { "color": "#58595b" } },
+          "labelColor": { "solid": { "color": "#BFBFBF" } },
           "fontFamily": "Arial",
           "fontSize": 10
         }]
@@ -488,10 +488,10 @@
     "map": {
       "*": {
         "dataPoint": [{
-          "defaultColor": { "solid": { "color": "#d2232a" } }
+          "defaultColor": { "solid": { "color": "#C8353D" } }
         }],
         "legend": [{
-          "labelColor": { "solid": { "color": "#58595b" } },
+          "labelColor": { "solid": { "color": "#BFBFBF" } },
           "fontFamily": "Arial",
           "fontSize": 10
         }]
@@ -500,10 +500,10 @@
     "filledMap": {
       "*": {
         "dataPoint": [{
-          "defaultColor": { "solid": { "color": "#d2232a" } }
+          "defaultColor": { "solid": { "color": "#C8353D" } }
         }],
         "legend": [{
-          "labelColor": { "solid": { "color": "#58595b" } },
+          "labelColor": { "solid": { "color": "#BFBFBF" } },
           "fontFamily": "Arial",
           "fontSize": 10
         }]
@@ -517,7 +517,7 @@
           "fontSize": 10
         }],
         "legend": [{
-          "labelColor": { "solid": { "color": "#58595b" } },
+          "labelColor": { "solid": { "color": "#BFBFBF" } },
           "fontFamily": "Arial",
           "fontSize": 10
         }]
@@ -526,7 +526,7 @@
     "shape": {
       "*": {
         "line": [{
-          "lineColor": { "solid": { "color": "#d2232a" } }
+          "lineColor": { "solid": { "color": "#C8353D" } }
         }]
       }
     },
@@ -540,21 +540,21 @@
 
   "textClasses": {
     "label": {
-      "color": "#58595b",
+      "color": "#BFBFBF",
       "fontFace": "Arial"
     },
     "callout": {
-      "color": "#d2232a",
+      "color": "#C8353D",
       "fontFace": "Arial",
       "fontSize": 28
     },
     "title": {
-      "color": "#d2232a",
+      "color": "#C8353D",
       "fontFace": "Arial",
       "fontSize": 12
     },
     "header": {
-      "color": "#005a9c",
+      "color": "#1282C6",
       "fontFace": "Arial"
     }
   }

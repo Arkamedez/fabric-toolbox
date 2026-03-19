@@ -51,12 +51,12 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Context | Color | Hex |
 |---|---|---|
-| ✅ Good / Positive | Dark Blue | `#1282C6` |
-| ⚠️ Neutral / Info | Blue | `#1282C6` |
+| ✅ Good / Positive | Light Blue | `#1E9FD3` |
+| ⚠️ Neutral / Info | Light Blue | `#1E9FD3` |
 | ❌ Bad / Negative | Red | `#C8353D` |
-| ▲ Increase (waterfall) | Dark Blue | `#1282C6` |
+| ▲ Increase (waterfall) | Light Blue | `#1E9FD3` |
 | ▼ Decrease (waterfall) | Red | `#C8353D` |
-| ■ Total (waterfall) | Blue | `#1282C6` |
+| ■ Total (waterfall) | Light Blue | `#1E9FD3` |
 
 ---
 
@@ -110,7 +110,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 │  Data Row 2  │  value     │  value    │  Alt Row: #000000 on #F2F2F2
 │  Data Row 3  │  value     │  value    │
 ├──────────────┼────────────┼───────────┤
-│  Total       │  value     │  value    │  Total: #FFFFFF on #1282C6, Arial Bold 11px
+│  Total       │  value     │  value    │  Total: #FFFFFF on #1E9FD3, Arial Bold 11px
 └──────────────┴────────────┴───────────┘
   Gridlines: #E6E6E6
   Outline: #BFBFBF
@@ -122,10 +122,10 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | Part | Font | Size | Foreground | Background |
 |---|---|---|---|---|
 | Column Headers | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
-| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
+| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
 | Values | Arial Regular | 10px | `#000000` | `#FFFFFF` |
 | Subtotals | Arial Bold | 10px | `#000000` | `#F2F2F2` |
-| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
+| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
 
 ### 4.4 Charts (Bar, Column, Line, Area)
 
@@ -220,7 +220,7 @@ SURFACES                   #1E9FD3  Series 6
 #E6E6E6  Borders
 #FFFFFF  Card BG           SEMANTIC
                            ────────
-                           #1282C6  Good / Increase
-                           #1282C6  Neutral / Total
+                           #1E9FD3  Good / Increase
+                           #1E9FD3  Neutral / Total
                            #C8353D  Bad / Decrease
 ```

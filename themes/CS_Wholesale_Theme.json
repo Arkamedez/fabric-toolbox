@@ -12,8 +12,8 @@
     "#BFBFBF"
   ],
 
-  "good": "#1282C6",
-  "neutral": "#1282C6",
+  "good": "#1E9FD3",
+  "neutral": "#1E9FD3",
   "bad": "#C8353D",
 
   "background": "#FFFFFF",
@@ -91,7 +91,7 @@
           "fontSize": 10
         }],
         "cardTitle": [{
-          "color": { "solid": { "color": "#1282C6" } },
+          "color": { "solid": { "color": "#1E9FD3" } },
           "fontFamily": "Arial",
           "fontSize": 12
         }]
@@ -367,7 +367,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#1282C6" } },
+          "backColor": { "solid": { "color": "#1E9FD3" } },
           "outline": "TopOnly"
         }]
       }
@@ -394,7 +394,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#1282C6" } },
+          "backColor": { "solid": { "color": "#1E9FD3" } },
           "outline": "RightOnly",
           "stepped": true,
           "steppedLayoutIndentation": 10
@@ -411,7 +411,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#1282C6" } },
+          "backColor": { "solid": { "color": "#1E9FD3" } },
           "outline": "TopOnly",
           "applyToHeaders": true
         }],
@@ -473,9 +473,9 @@
     "waterfallChart": {
       "*": {
         "sentimentColors": [{
-          "increaseFill": { "solid": { "color": "#1282C6" } },
+          "increaseFill": { "solid": { "color": "#1E9FD3" } },
           "decreaseFill": { "solid": { "color": "#C8353D" } },
-          "totalFill": { "solid": { "color": "#1282C6" } }
+          "totalFill": { "solid": { "color": "#1E9FD3" } }
         }],
         "categoryAxis": [{
           "labelColor": { "solid": { "color": "#BFBFBF" } },

@@ -34,8 +34,8 @@
     "#15501D",
     "#8F8F8F"
   ],
-  "good": "#1E9FD3",
-  "neutral": "#1E9FD3",
+  "good": "#1282C6",
+  "neutral": "#1282C6",
   "bad": "#C8353D",
   "background": "#FFFFFF",
   "foreground": "#000000",
@@ -60,7 +60,7 @@
           {
             "foreground": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             }
           }
@@ -723,7 +723,7 @@
             },
             "backColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outline": "BottomOnly",
@@ -760,7 +760,7 @@
             },
             "backColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outline": "TopOnly"
@@ -803,7 +803,7 @@
             },
             "backColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outline": "BottomOnly",
@@ -821,7 +821,7 @@
             },
             "backColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outline": "RightOnly",
@@ -858,7 +858,7 @@
             },
             "backColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outline": "TopOnly",
@@ -905,7 +905,7 @@
             "fontSize": 11,
             "fontColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "background": {
@@ -920,7 +920,7 @@
           {
             "outlineColor": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "outlineWeight": 1
@@ -978,7 +978,7 @@
           {
             "increaseFill": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             },
             "decreaseFill": {
@@ -988,7 +988,7 @@
             },
             "totalFill": {
               "solid": {
-                "color": "#1E9FD3"
+                "color": "#1282C6"
               }
             }
           }
@@ -1090,6 +1090,16 @@
               }
             }
           }
+        ],
+        "fill": [
+          {
+            "show": true,
+            "fillColor": {
+              "solid": {
+                "color": "#1282C6"
+              }
+            }
+          }
         ]
       }
     },
@@ -1124,7 +1134,7 @@
       "fontSize": 12
     },
     "header": {
-      "color": "#1E9FD3",
+      "color": "#1282C6",
       "fontFace": "Arial"
     }
   }

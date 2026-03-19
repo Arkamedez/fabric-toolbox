@@ -51,12 +51,12 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Context | Color | Hex |
 |---|---|---|
-| ✅ Good / Positive | Light Blue | `#1E9FD3` |
-| ⚠️ Neutral / Info | Light Blue | `#1E9FD3` |
+| ✅ Good / Positive | Dark Blue | `#1282C6` |
+| ⚠️ Neutral / Info | Dark Blue | `#1282C6` |
 | ❌ Bad / Negative | Red | `#C8353D` |
-| ▲ Increase (waterfall) | Light Blue | `#1E9FD3` |
+| ▲ Increase (waterfall) | Dark Blue | `#1282C6` |
 | ▼ Decrease (waterfall) | Red | `#C8353D` |
-| ■ Total (waterfall) | Light Blue | `#1E9FD3` |
+| ■ Total (waterfall) | Dark Blue | `#1282C6` |
 
 ---
 
@@ -69,11 +69,11 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 |---|---|---|---|---|
 | **Page Title** | Arial | Bold | 16–20px | `#C8353D` |
 | **Visual Title** | Arial | Bold | 12–14px | `#1282C6` |
-| **Section Header** | Arial | Bold | 12px | `#1E9FD3` |
+| **Section Header** | Arial | Bold | 12px | `#1282C6` |
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
 | **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
 | **Data Labels** | Arial | Regular | 10px | `#BFBFBF` |
-| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#1E9FD3` |
+| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#1282C6` |
 | **Table Values** | Arial | Regular | 10px | `#000000` |
 | **Callout / KPI** | Arial | Bold | 28px | `#C8353D` |
 | **Category Label** | Arial | Regular | 11px | `#BFBFBF` |
@@ -104,13 +104,13 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ```
 ┌──────────────┬────────────┬───────────┐
-│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #1E9FD3, Arial Bold 11px
+│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #1282C6, Arial Bold 11px
 ├──────────────┼────────────┼───────────┤
 │  Data Row 1  │  value     │  value    │  Row: #000000 on #FFFFFF, Arial 10px
 │  Data Row 2  │  value     │  value    │  Alt Row: #000000 on #F2F2F2
 │  Data Row 3  │  value     │  value    │
 ├──────────────┼────────────┼───────────┤
-│  Total       │  value     │  value    │  Total: #FFFFFF on #1E9FD3, Arial Bold 11px
+│  Total       │  value     │  value    │  Total: #FFFFFF on #1282C6, Arial Bold 11px
 └──────────────┴────────────┴───────────┘
   Gridlines: #E6E6E6
   Outline: #BFBFBF
@@ -121,11 +121,11 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Part | Font | Size | Foreground | Background |
 |---|---|---|---|---|
-| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
-| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
+| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
+| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
 | Values | Arial Regular | 10px | `#000000` | `#FFFFFF` |
 | Subtotals | Arial Bold | 10px | `#000000` | `#F2F2F2` |
-| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
+| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
 
 ### 4.4 Charts (Bar, Column, Line, Area)
 
@@ -145,10 +145,10 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Element | Specification |
 |---|---|
-| Header text | Arial Bold 11px, `#1E9FD3` |
+| Header text | Arial Bold 11px, `#1282C6` |
 | Header outline | Bottom only |
 | Item text | Arial Regular 11px, `#000000` |
-| Outline color | `#1E9FD3`, weight 1px |
+| Outline color | `#1282C6`, weight 1px |
 | Background | `#FFFFFF` |
 
 ### 4.6 Gauge
@@ -220,7 +220,7 @@ SURFACES                   #1E9FD3  Series 6
 #E6E6E6  Borders
 #FFFFFF  Card BG           SEMANTIC
                            ────────
-                           #1E9FD3  Good / Increase
-                           #1E9FD3  Neutral / Total
+                           #1282C6  Good / Increase
+                           #1282C6  Neutral / Total
                            #C8353D  Bad / Decrease
 ```

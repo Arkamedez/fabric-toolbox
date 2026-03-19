@@ -37,7 +37,7 @@
   "good": "#1282C6",
   "neutral": "#1282C6",
   "bad": "#C8353D",
-  "background": "#FFFFFF",
+  "background": "#F2F2F2",
   "foreground": "#000000",
   "tableAccent": "#C8353D",
   "visualStyles": {
@@ -50,6 +50,16 @@
                 "color": "#F2F2F2"
               }
             }
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F2F2F2"
+              }
+            },
+            "transparency": 0
           }
         ]
       }
@@ -1113,6 +1123,24 @@
         "border": [
           {
             "show": false
+          }
+        ]
+      }
+    },
+    "basicShape": {
+      "*": {
+        "shape": [
+          {
+            "fillColor": {
+              "solid": {
+                "color": "#1282C6"
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": "#1282C6"
+              }
+            }
           }
         ]
       }

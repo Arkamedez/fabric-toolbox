@@ -51,10 +51,10 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Context | Color | Hex |
 |---|---|---|
-| ✅ Good / Positive | Dark Green | `#1C6B27` |
+| ✅ Good / Positive | Dark Blue | `#1282C6` |
 | ⚠️ Neutral / Info | Blue | `#1282C6` |
 | ❌ Bad / Negative | Red | `#C8353D` |
-| ▲ Increase (waterfall) | Dark Green | `#1C6B27` |
+| ▲ Increase (waterfall) | Dark Blue | `#1282C6` |
 | ▼ Decrease (waterfall) | Red | `#C8353D` |
 | ■ Total (waterfall) | Blue | `#1282C6` |
 
@@ -220,7 +220,7 @@ SURFACES                   #1E9FD3  Series 6
 #E6E6E6  Borders
 #FFFFFF  Card BG           SEMANTIC
                            ────────
-                           #1C6B27  Good / Increase
+                           #1282C6  Good / Increase
                            #1282C6  Neutral / Total
                            #C8353D  Bad / Decrease
 ```

@@ -12,7 +12,7 @@
     "#BFBFBF"
   ],
 
-  "good": "#1C6B27",
+  "good": "#1282C6",
   "neutral": "#1282C6",
   "bad": "#C8353D",
 
@@ -474,7 +474,7 @@
     "waterfallChart": {
       "*": {
         "sentimentColors": [{
-          "increaseFill": { "solid": { "color": "#1C6B27" } },
+          "increaseFill": { "solid": { "color": "#1282C6" } },
           "decreaseFill": { "solid": { "color": "#C8353D" } },
           "totalFill": { "solid": { "color": "#1282C6" } }
         }],

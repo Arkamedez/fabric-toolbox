@@ -94,8 +94,8 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 │    Total Revenue         │  Arial Regular 11px #BFBFBF
 │                          │
 └──────────────────────────┘
-  Background: #FFFFFF
-  Border: 1px solid #E6E6E6
+  Background: #F2F2F2
+  Border: none
   Drop Shadow: subtle, #E6E6E6
   Padding: 8px
 ```
@@ -179,7 +179,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | `padding-page` | 16px | Page margin |
 | `gap-visual` | 8px | Space between visuals |
 | `border-radius` | 2–4px | Card corners |
-| `border-weight` | 1px | Standard border thickness |
+| `border-weight` | none | Borders disabled globally |
 | `shadow` | `0 1px 3px #E6E6E6` | Card drop shadows |
 
 ---

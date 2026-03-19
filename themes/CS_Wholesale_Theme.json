@@ -525,7 +525,7 @@
     "shape": {
       "*": {
         "line": [{
-          "lineColor": { "solid": { "color": "#1E9FD3" } }
+          "lineColor": { "solid": { "color": "#1282C6" } }
         }]
       }
     },

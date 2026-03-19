@@ -68,7 +68,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | Element | Font | Weight | Size | Color |
 |---|---|---|---|---|
 | **Page Title** | Arial | Bold | 16–20px | `#C8353D` |
-| **Visual Title** | Arial | Bold | 12–14px | `#1E9FD3` |
+| **Visual Title** | Arial | Bold | 12–14px | `#1282C6` |
 | **Section Header** | Arial | Bold | 12px | `#1E9FD3` |
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
 | **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
@@ -88,7 +88,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ```
 ┌──────────────────────────┐
-│  [Visual Title]          │  Arial Bold 12px #1E9FD3
+│  [Visual Title]          │  Arial Bold 12px #1282C6
 │                          │
 │       1,234              │  Arial Bold 28px #C8353D
 │    Total Revenue         │  Arial Regular 11px #BFBFBF

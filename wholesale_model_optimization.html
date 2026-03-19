@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Data Model — DirectQuery Optimization Report</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --surface-color-alt: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --accent-primary: #38bdf8;
+            --accent-danger: #ef4444;
+            --accent-warning: #f59e0b;
+            --accent-info: #eab308;
+            --border-color: #475569;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: var(--text-primary);
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--accent-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--surface-color-alt);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        blockquote {
+            background-color: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid var(--accent-primary);
+            margin: 1.5em 0;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        blockquote.caution {
+            background-color: rgba(239, 68, 68, 0.1);
+            border-left-color: var(--accent-danger);
+        }
+
+        blockquote.warning {
+            background-color: rgba(245, 158, 11, 0.1);
+            border-left-color: var(--accent-warning);
+        }
+
+        code {
+            font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            background-color: var(--surface-color-alt);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: var(--accent-primary);
+        }
+
+        pre {
+            background-color: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #e2e8f0;
+        }
+        
+        ul {
+            color: var(--text-secondary);
+        }
+
+        .priority-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .p0 { background-color: var(--accent-danger); }
+        .p1 { background-color: var(--accent-danger); }
+        .p2 { background-color: var(--accent-warning); }
+        .p3 { background-color: var(--accent-info); }
+        
+        .section-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wholesale Data Model — DirectQuery Optimization Report</h1>
+    <blockquote>Analysis of <code>Wholesale Model 030526.bim</code> (120,689 lines, 125 tables, 1,072 measures)</blockquote>
+
+    <h2>Model Overview</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Tables</strong></td>
+                <td>125 total</td>
+            </tr>
+            <tr>
+                <td>DirectQuery</td>
+                <td>59</td>
+            </tr>
+            <tr>
+                <td>Dual Mode</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>Import</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td><strong>Relationships</strong></td>
+                <td>194 (187 active, 7 inactive)</td>
+            </tr>
+            <tr>
+                <td><strong>Bi-Directional</strong></td>
+                <td>14 (13 active)</td>
+            </tr>
+            <tr>
+                <td><strong>Measures</strong></td>
+                <td>1,072</td>
+            </tr>
+            <tr>
+                <td><strong>Max Connections</strong></td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>All tables connect to <strong>Snowflake</strong> via <code>spartannash.east-us-2.azure.snowflakecomputing.com</code> / <code>ITG_LARGE_WH</code>.</p>
+
+    <h2><span class="section-icon">🔴</span>Critical Issues (High Impact)</h2>
+
+    <h3>1. Calculated Columns on DirectQuery Tables — 22 columns across 13 tables</h3>
+    <blockquote class="caution">
+        <strong>[!CAUTION]</strong><br>
+        Calculated columns on DirectQuery tables are evaluated <strong>row-by-row at query time</strong>. Each one generates additional SQL round-trips or prevents query folding entirely. These are the single biggest performance killers in a DQ model.
+    </blockquote>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Table</th>
+                <th>Calc Cols</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>F_Purchase Detail</strong></td>
+                <td>4</td>
+                <td>Uses <code>TODAY()</code>, <code>IF()</code>, arithmetic</td>
+            </tr>
+            <tr>
+                <td><strong>F_FD.Sales</strong></td>
+                <td>3</td>
+                <td>Complex <code>SWITCH(TRUE(), ...)</code> logic</td>
+            </tr>
+            <tr>
+                <td><strong>F_Item Out of Stock</strong></td>
+                <td>3</td>
+                <td><code>CONCATENATE()</code> for display strings</td>
+            </tr>
+            <tr>
+                <td><strong>F_Layer History</strong></td>
+                <td>2</td>
+                <td>Arithmetic (<code>Ext Inventory</code>, <code>Extended inventory value</code>)</td>
+            </tr>
+            <tr>
+                <td><strong>F_Purchase Header</strong></td>
+                <td>2</td>
+                <td><code>IF()</code> flag, arithmetic</td>
+            </tr>
+            <tr>
+                <td><strong>D_HR_Associate</strong></td>
+                <td>2</td>
+                <td>String concatenation (<code>&amp; "-" &amp;</code>)</td>
+            </tr>
+            <tr>
+                <td>D_HR_Department</td>
+                <td>1</td>
+                <td>String concat with <code>UNICHAR(10)</code></td>
+            </tr>
+            <tr>
+                <td>D_HR_Job Code</td>
+                <td>1</td>
+                <td>String concatenation</td>
+            </tr>
+            <tr>
+                <td>D_HR_Earn Code</td>
+                <td>1</td>
+                <td>String concatenation</td>
+            </tr>
+            <tr>
+                <td>F_PO Compliance</td>
+                <td>1</td>
+                <td><code>TODAY()</code> as a column!</td>
+            </tr>
+            <tr>
+                <td>F_Sales Plan Sell History</td>
+                <td>1</td>
+                <td><code>IF(&gt;=TODAY(), ...)</code></td>
+            </tr>
+            <tr>
+                <td>F_Warehouse Deal</td>
+                <td>1</td>
+                <td><code>IF(&gt;=TODAY(), ...)</code></td>
+            </tr>
+            <tr>
+                <td>F_ASN PO Header</td>
+                <td>1</td>
+                <td>Constant string value</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Recommendation:</strong> Move <strong>all</strong> calculated columns to Snowflake views or computed/virtual columns. For the string concatenation ones (HR tables, Item Out of Stock), create view columns. For <code>TODAY()</code>-based columns, use Snowflake <code>CURRENT_DATE()</code> in a view or move the logic into DAX measures instead.</p>
+
+    <hr>
+
+    <h3>2. Extremely Wide DirectQuery Tables — Excessive Column Counts</h3>
+    <blockquote class="warning">
+        <strong>[!WARNING]</strong><br>
+        Every column in a DQ table generates wider SQL queries. Snowflake must read/transmit more data even when columns aren't used in a visual. Hidden columns still get pulled in relationship resolution.
+    </blockquote>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Table</th>
+                <th>Total Cols</th>
+                <th>Hidden</th>
+                <th>Calculated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>D_Item</strong> (dual)</td>
+                <td>272</td>
+                <td>0</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td><strong>F_PO Payment Detail</strong></td>
+                <td>250</td>
+                <td>105</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><strong>F_FD.Sales</strong></td>
+                <td>206</td>
+                <td>117</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><strong>F_Demand Forecast</strong></td>
+                <td>123</td>
+                <td>30</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><strong>F_Warehouse Deal</strong></td>
+                <td>106</td>
+                <td>35</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>D_Customer (dual)</td>
+                <td>102</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>D_HR_Associate</td>
+                <td>88</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>F_Purchase Detail</td>
+                <td>88</td>
+                <td>38</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>F_Purchase Header</td>
+                <td>83</td>
+                <td>61</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+        <li><strong>D_Item</strong> has <strong>14 calculated columns</strong> on a dual-mode table with 272 cols — audit which columns are actually used in reports and remove unused ones</li>
+        <li><strong>F_PO Payment Detail</strong> has 250 columns with 105 hidden — create a Snowflake view that only exposes the ~145 needed columns rather than pulling the full table</li>
+        <li><strong>F_FD.Sales</strong> has 206 columns with 117 hidden — same approach; create a narrow view with only the ~89 visible columns + key columns</li>
+        <li><strong>F_Demand Forecast</strong> with 123 columns — reduce to only cols used in actual report visuals</li>
+    </ul>
+
+    <hr>
+
+    <h3>3. <code>TODAY()</code> / <code>NOW()</code> in 34 Measures — Prevents Query Caching</h3>
+    <blockquote class="caution">
+        <strong>[!CAUTION]</strong><br>
+        <code>TODAY()</code> is a volatile function. In DirectQuery mode, it <strong>prevents Snowflake query result caching</strong> because the query parameters change every day. With 34 measures using <code>TODAY()</code>, this means these queries can never hit the Snowflake result cache.
+    </blockquote>
+
+    <p>Key offenders:</p>
+    <ul>
+        <li><code>Total Sales Amount</code>, <code>Shipped Case Qty</code>, <code>Not Shipped (Buyer/Supply Chain/Unauth/Vendor)</code> — all use <code>FILTER('D_Time Hierarchy', Full Date &lt;= TODAY())</code></li>
+        <li>Multiple <code>&lt; today</code> report measures</li>
+        <li><code>F_PO Compliance</code> has <code>TODAY()</code> as a <strong>calculated column</strong> (entire table re-evaluated daily)</li>
+    </ul>
+
+    <p><strong>Recommendation:</strong> Replace <code>TODAY()</code> references with a <strong>pre-computed "current date" column</strong> or a <strong>disconnected date parameter table</strong> that's set at refresh time. Example:</p>
+    <pre><code>// Instead of:
+FILTER('D_Time Hierarchy', 'D_Time Hierarchy'[Full Date] &lt;= TODAY())
+
+// Use a pre-computed flag column (import or Snowflake view):
+FILTER('D_Time Hierarchy', 'D_Time Hierarchy'[Is Current Or Past] = TRUE)</code></pre>
+
+    <hr>
+
+    <h2><span class="section-icon">🟠</span>Important Issues (Medium Impact)</h2>
+
+    <h3>4. 175 Measures Using <code>FILTER()</code> — Many with Expensive Patterns</h3>
+    <p><strong>95+ measures</strong> use <code>FILTER(ALL('D_Time Hierarchy'), ...)</code> — the classic "Last Year" pattern:</p>
+    <pre><code>CALCULATE(
+    SUM('F_FD.Sales'[Total Sales Amt]),
+    FILTER(
+        ALL('D_Time Hierarchy'),
+        'D_Time Hierarchy'[Date Key] IN VALUES('D_Time Hierarchy'[Date ID LY])
+    )
+)</code></pre>
+
+    <blockquote>
+        <strong>[!IMPORTANT]</strong><br>
+        <code>FILTER(ALL('D_Time Hierarchy'), ...)</code> iterates the <strong>entire date table</strong> to find matching rows. In DirectQuery, this generates a subquery or cross-join that Snowflake must evaluate. With 95+ measures doing this, query complexity compounds massively.
+    </blockquote>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+        <li>Use <code>TREATAS()</code> or <code>USERELATIONSHIP()</code> for LY calculations instead of <code>FILTER(ALL(...))</code></li>
+        <li>The <strong>Time Intelligence calculation group</strong> (PTD/QTD/YTD/WTD) already exists — extend it to handle LY comparisons natively, reducing measure count</li>
+        <li>Consider using a <code>DATEADD</code>-style approach via the calculation group rather than individual LY measures</li>
+    </ul>
+
+    <h3>5. 14 Bi-Directional Relationships</h3>
+    <p>Active bi-directional relationships force the engine to evaluate filter propagation in <strong>both directions</strong>, doubling the filter context evaluation cost in DirectQuery:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>D_Financial Hierarchy</td>
+                <td>D_Financial Dept</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Customer Group</td>
+                <td>D_Customer</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Relative Time Slicer</td>
+                <td>D_Time Hierarchy</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Biceps</td>
+                <td>D_Vendor</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>F_Purchase Detail</td>
+                <td>F_Purchase Header</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>F_ASN PO Line Item</td>
+                <td>F_ASN PO Header</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>F_ASN PO Item Exception</td>
+                <td>F_ASN PO Line Item</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>F_ASN PO Compliance</td>
+                <td>D_ASN PO Compliance Reason</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Facility</td>
+                <td>D_AMZ Vendor Code</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Time Hierarchy</td>
+                <td>D_Fiscal Week Last 12 Weeks</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Time Hierarchy</td>
+                <td>O_Week Bridge</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>F_PO Payment Detail</td>
+                <td>F_Purchase Header</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>D_Retail Rep Customer</td>
+                <td>D_Customer</td>
+                <td>ACTIVE</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Recommendation:</strong> Audit which bi-directional relationships are truly needed. Fact-to-Fact bi-directional (e.g., <code>F_Purchase Detail ↔ F_Purchase Header</code>, <code>F_PO Payment Detail ↔ F_Purchase Header</code>) are especially expensive. Consider using <code>CROSSFILTER()</code> in measures instead of model-level bi-directional filtering.</p>
+
+    <h3>6. M Query Transforms Breaking Query Folding</h3>
+    <p>Several tables have M (Power Query) transforms that may prevent Snowflake from optimally folding the query:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Table</th>
+                <th>Mode</th>
+                <th>Transform</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>F_FD.Sales</strong></td>
+                <td>DirectQuery</td>
+                <td><code>Table.AddColumn</code> / <code>Table.TransformColumns</code></td>
+            </tr>
+            <tr>
+                <td><strong>D_Item</strong></td>
+                <td>Dual</td>
+                <td><code>Table.SelectRows</code> + <code>Table.SelectColumns</code> + <code>Table.ExpandTableColumn</code></td>
+            </tr>
+            <tr>
+                <td>D_Wholesale Dept</td>
+                <td>Dual</td>
+                <td>Transform operations</td>
+            </tr>
+            <tr>
+                <td>D_Credit Code</td>
+                <td>Dual</td>
+                <td>Transform operations</td>
+            </tr>
+            <tr>
+                <td>D_Vendor / D_Master Vendor / D_PO Vendor</td>
+                <td>DQ/Dual</td>
+                <td>Transform operations</td>
+            </tr>
+            <tr>
+                <td>D_Vendor Broker</td>
+                <td>Import</td>
+                <td>Transform operations</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Recommendation:</strong> Where possible, move all M transforms into Snowflake <strong>views</strong> so the query sent to Snowflake is a clean <code>SELECT * FROM view</code>. This maximizes folding and lets Snowflake's optimizer handle all filtering/joining.</p>
+
+    <hr>
+
+    <h2><span class="section-icon">🟡</span>Optimization Opportunities (Lower Impact but Worth Pursuing)</h2>
+
+    <h3>7. Massive Measure Count (1,072) — Many Appear Duplicative</h3>
+    <p>The model has two giant measure tables:</p>
+    <ul>
+        <li><strong>O_Ad-hoc Measures</strong>: 296 measures</li>
+        <li><strong>O_Report Measure</strong>: 763 measures</li>
+    </ul>
+    <p>There are <strong>apparent duplicates</strong> with different naming conventions:</p>
+    <ul>
+        <li><code>LY Total Sales Amount</code> (ad-hoc) vs <code>LY Total Sales Amt</code> (report)</li>
+        <li><code>Shipped Qty</code> / <code>Shipped Case Qty</code> / <code>LY Shipped Qty</code> duplicated across both tables</li>
+        <li><code>Count Orders</code>, <code>Count_Orders</code>, <code>Count-Orders</code>, <code>Count Orders.</code> — <strong>4 variants</strong> of the same measure!</li>
+    </ul>
+    <p><strong>Recommendation:</strong> Consolidate measures. This reduces DAX compilation time and improves maintainability. Aim to get under 500 measures.</p>
+
+    <h3>8. F_Agg_Sales Aggregation Table — Validate Coverage</h3>
+    <p>The model has an aggregation table <code>F_Agg_Sales</code> (import, incremental refresh, 13 partitions) mapping 27 columns from <code>F_FD.Sales</code>. This is <strong>good practice</strong> for DirectQuery optimization.</p>
+    <p><strong>Verify:</strong></p>
+    <ul>
+        <li>Are the aggregation mappings covering the <strong>most common query patterns</strong> (i.e., the sales dashboard KPIs)?</li>
+        <li>The agg table uses 10-year rolling window with 2-month incremental — this seems appropriate</li>
+        <li>Ensure the <code>Summarization</code> properties are correctly set for all GroupBy vs. Sum columns</li>
+        <li>Consider adding more aggregation tables for other heavy DQ fact tables like <code>F_Purchase Detail</code> or <code>F_PO Payment Detail</code></li>
+    </ul>
+
+    <h3>9. <code>D_Item</code> Has 14 Calculated Columns in Dual Mode</h3>
+    <p>The <code>D_Item</code> table (272 columns, dual mode) has 14 calculated columns. In dual mode, these are computed during import refresh but still affect import refresh time and model size.</p>
+    <p><strong>Recommendation:</strong> Move these to the Snowflake view to eliminate DAX-computed columns entirely.</p>
+
+    <h3>10. Connection Pool — Consider Tuning <code>dataSourceDefaultMaxConnections</code></h3>
+    <p>Currently set to <strong>30</strong> max connections. With 59 DirectQuery tables potentially generating concurrent queries, consider:</p>
+    <ul>
+        <li><strong>Increasing to 40-50</strong> if Snowflake warehouse can handle it</li>
+        <li><strong>Monitoring</strong> Snowflake query queuing to see if queries are being throttled</li>
+    </ul>
+
+    <h3>11. Incremental Refresh Configuration</h3>
+    <p>Three tables use incremental refresh:</p>
+    <ul>
+        <li><code>F_Agg_Sales</code> — 10yr window, 2-month incremental</li>
+        <li><code>F_Caito Day Fact</code> — 10yr window, 2-month incremental</li>
+        <li><code>F_Caito Week Forecast Budget</code> — 10yr window, 2-month incremental</li>
+    </ul>
+    <p>These are appropriately configured. No changes recommended.</p>
+
+    <hr>
+
+    <h2>Summary: Priority Action Items</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Priority</th>
+                <th>Action</th>
+                <th>Est. Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="priority-indicator p0"></span><strong>P0</strong></td>
+                <td>Move 22 calculated columns off DQ tables to Snowflake views</td>
+                <td><strong>Very High</strong> — eliminates row-by-row evaluation</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p0"></span><strong>P0</strong></td>
+                <td>Replace <code>TODAY()</code> in 34 measures with pre-computed flags</td>
+                <td><strong>Very High</strong> — enables query caching</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p1"></span><strong>P1</strong></td>
+                <td>Narrow wide DQ tables (250+, 206+ cols) to only used columns via views</td>
+                <td><strong>High</strong> — reduces data transfer</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p2"></span><strong>P2</strong></td>
+                <td>Refactor <code>FILTER(ALL(...))</code> LY measures to <code>TREATAS()</code>/calc group</td>
+                <td><strong>High</strong> — reduces query complexity</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p2"></span><strong>P2</strong></td>
+                <td>Remove unnecessary bi-directional relationships</td>
+                <td><strong>Medium</strong> — reduces filter propagation cost</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p2"></span><strong>P2</strong></td>
+                <td>Push M transforms to Snowflake views for better folding</td>
+                <td><strong>Medium</strong> — Snowflake optimizes better</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p3"></span><strong>P3</strong></td>
+                <td>Consolidate duplicate measures (1,072 → target &lt;500)</td>
+                <td><strong>Medium</strong> — reduces compilation overhead</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p3"></span><strong>P3</strong></td>
+                <td>Add aggregation tables for <code>F_Purchase Detail</code> / <code>F_PO Payment Detail</code></td>
+                <td><strong>Medium</strong> — reduces DQ queries for common patterns</td>
+            </tr>
+            <tr>
+                <td><span class="priority-indicator p3"></span><strong>P3</strong></td>
+                <td>Tune <code>dataSourceDefaultMaxConnections</code> (30 → 40-50)</td>
+                <td><strong>Low-Medium</strong> — reduces query queuing</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

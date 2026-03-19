@@ -73,7 +73,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
 | **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
 | **Data Labels** | Arial | Regular | 10px | `#BFBFBF` |
-| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#C8353D` |
+| **Table Headers** | Arial | Bold | 11px | `#FFFFFF` on `#1E9FD3` |
 | **Table Values** | Arial | Regular | 10px | `#000000` |
 | **Callout / KPI** | Arial | Bold | 28px | `#C8353D` |
 | **Category Label** | Arial | Regular | 11px | `#BFBFBF` |
@@ -104,7 +104,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ```
 ┌──────────────┬────────────┬───────────┐
-│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #C8353D, Arial Bold 11px
+│  Column A    │  Column B  │  Column C │  Header: #FFFFFF on #1E9FD3, Arial Bold 11px
 ├──────────────┼────────────┼───────────┤
 │  Data Row 1  │  value     │  value    │  Row: #000000 on #FFFFFF, Arial 10px
 │  Data Row 2  │  value     │  value    │  Alt Row: #000000 on #F2F2F2
@@ -121,7 +121,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 | Part | Font | Size | Foreground | Background |
 |---|---|---|---|---|
-| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#C8353D` |
+| Column Headers | Arial Bold | 11px | `#FFFFFF` | `#1E9FD3` |
 | Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
 | Values | Arial Regular | 10px | `#000000` | `#FFFFFF` |
 | Subtotals | Arial Bold | 10px | `#000000` | `#F2F2F2` |

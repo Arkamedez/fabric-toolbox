@@ -3,17 +3,17 @@
 
   "dataColors": [
     "#C8353D",
-    "#005a9c",
-    "#c4d600",
-    "#6a2a8d",
-    "#e87722",
-    "#00a9e0",
-    "#00843d",
+    "#1282C6",
+    "#79BE2E",
+    "#9F2C92",
+    "#E7703A",
+    "#1E9FD3",
+    "#1C6B27",
     "#BFBFBF"
   ],
 
-  "good": "#00843d",
-  "neutral": "#005a9c",
+  "good": "#1C6B27",
+  "neutral": "#1282C6",
   "bad": "#C8353D",
 
   "background": "#FFFFFF",
@@ -92,7 +92,7 @@
           "fontSize": 10
         }],
         "cardTitle": [{
-          "color": { "solid": { "color": "#005a9c" } },
+          "color": { "solid": { "color": "#1282C6" } },
           "fontFamily": "Arial",
           "fontSize": 12
         }]
@@ -368,7 +368,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#005a9c" } },
+          "backColor": { "solid": { "color": "#1282C6" } },
           "outline": "TopOnly"
         }]
       }
@@ -395,7 +395,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#005a9c" } },
+          "backColor": { "solid": { "color": "#1282C6" } },
           "outline": "RightOnly",
           "stepped": true,
           "steppedLayoutIndentation": 10
@@ -412,7 +412,7 @@
           "fontFamily": "Arial",
           "fontSize": 11,
           "fontColor": { "solid": { "color": "#FFFFFF" } },
-          "backColor": { "solid": { "color": "#005a9c" } },
+          "backColor": { "solid": { "color": "#1282C6" } },
           "outline": "TopOnly",
           "applyToHeaders": true
         }],

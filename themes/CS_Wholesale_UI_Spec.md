@@ -39,24 +39,24 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | Order | Name | Hex | Pantone | Primary Use |
 |---|---|---|---|---|
 | 1 | Red | `#C8353D` | 1795 C | Default / first series |
-| 2 | Blue | `#005a9c` | 293 C | Second series, totals, secondary KPIs |
-| 3 | Lime Green | `#c4d600` | 382 C | Third series, positive indicators |
-| 4 | Purple | `#6a2a8d` | 268 C | Fourth series, categorical contrast |
-| 5 | Orange | `#e87722` | 158 C | Fifth series, warnings |
-| 6 | Cyan | `#00a9e0` | Process Blue C | Sixth series, informational |
-| 7 | Dark Green | `#00843d` | 355 C | Seventh series, success states |
+| 2 | Dark Blue | `#1282C6` | 293 C | Second series, totals, secondary KPIs |
+| 3 | Lime Green | `#79BE2E` | 382 C | Third series, positive indicators |
+| 4 | Magenta | `#9F2C92` | 268 C | Fourth series, categorical contrast |
+| 5 | Orange | `#E7703A` | 158 C | Fifth series, warnings |
+| 6 | Light Blue | `#1E9FD3` | Process Blue C | Sixth series, informational |
+| 7 | Dark Green | `#1C6B27` | 355 C | Seventh series, success states |
 | 8 | Gray | `#BFBFBF` | Cool Gray 9 C | Eighth series, neutral/baseline |
 
 ### Semantic Colors
 
 | Context | Color | Hex |
 |---|---|---|
-| ✅ Good / Positive | Dark Green | `#00843d` |
-| ⚠️ Neutral / Info | Blue | `#005a9c` |
+| ✅ Good / Positive | Dark Green | `#1C6B27` |
+| ⚠️ Neutral / Info | Blue | `#1282C6` |
 | ❌ Bad / Negative | Red | `#C8353D` |
-| ▲ Increase (waterfall) | Dark Green | `#00843d` |
+| ▲ Increase (waterfall) | Dark Green | `#1C6B27` |
 | ▼ Decrease (waterfall) | Red | `#C8353D` |
-| ■ Total (waterfall) | Blue | `#005a9c` |
+| ■ Total (waterfall) | Blue | `#1282C6` |
 
 ---
 
@@ -69,7 +69,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 |---|---|---|---|---|
 | **Page Title** | Arial | Bold | 16–20px | `#C8353D` |
 | **Visual Title** | Arial | Bold | 12–14px | `#000000` |
-| **Section Header** | Arial | Bold | 12px | `#005a9c` |
+| **Section Header** | Arial | Bold | 12px | `#1282C6` |
 | **Body Text** | Arial | Regular | 10–11px | `#000000` |
 | **Axis Labels** | Arial | Regular | 10px | `#BFBFBF` |
 | **Data Labels** | Arial | Regular | 10px | `#BFBFBF` |
@@ -110,7 +110,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 │  Data Row 2  │  value     │  value    │  Alt Row: #000000 on #F2F2F2
 │  Data Row 3  │  value     │  value    │
 ├──────────────┼────────────┼───────────┤
-│  Total       │  value     │  value    │  Total: #FFFFFF on #005a9c, Arial Bold 11px
+│  Total       │  value     │  value    │  Total: #FFFFFF on #1282C6, Arial Bold 11px
 └──────────────┴────────────┴───────────┘
   Gridlines: #E6E6E6
   Outline: #BFBFBF
@@ -122,10 +122,10 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | Part | Font | Size | Foreground | Background |
 |---|---|---|---|---|
 | Column Headers | Arial Bold | 11px | `#FFFFFF` | `#C8353D` |
-| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#005a9c` |
+| Row Headers | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
 | Values | Arial Regular | 10px | `#000000` | `#FFFFFF` |
 | Subtotals | Arial Bold | 10px | `#000000` | `#F2F2F2` |
-| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#005a9c` |
+| Grand Total | Arial Bold | 11px | `#FFFFFF` | `#1282C6` |
 
 ### 4.4 Charts (Bar, Column, Line, Area)
 
@@ -187,8 +187,8 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 ## 6. Accessibility Notes
 
 - All body text must be **Black** (`#000000`) on white backgrounds for maximum contrast
-- White text on Red (`#C8353D`) and Blue (`#005a9c`) backgrounds meets **WCAG AA** contrast (4.5:1+)
-- Lime Green (`#c4d600`) should only be used for filled shapes, **not** for text on white (fails contrast)
+- White text on Red (`#C8353D`) and Blue (`#1282C6`) backgrounds meets **WCAG AA** contrast (4.5:1+)
+- Lime Green (`#79BE2E`) should only be used for filled shapes, **not** for text on white (fails contrast)
 - Avoid using color alone to convey meaning — always pair with labels or icons
 - Minimum font size: **10px** for any readable text
 
@@ -210,17 +210,17 @@ The companion Power BI theme JSON implementing this spec is available at:
 CORPORATE                  SPLASH / DATA SERIES
 ─────────────              ──────────────────────
 #C8353D  Red (Primary)     #C8353D  Series 1
-#BFBFBF  Gray              #005a9c  Series 2
-#000000  Black             #c4d600  Series 3
-#FFFFFF  White             #6a2a8d  Series 4
-                           #e87722  Series 5
-SURFACES                   #00a9e0  Series 6
-──────────                 #00843d  Series 7
+#BFBFBF  Gray              #1282C6  Series 2
+#000000  Black             #79BE2E  Series 3
+#FFFFFF  White             #9F2C92  Series 4
+                           #E7703A  Series 5
+SURFACES                   #1E9FD3  Series 6
+──────────                 #1C6B27  Series 7
 #F2F2F2  Page BG           #BFBFBF  Series 8
 #E6E6E6  Borders
 #FFFFFF  Card BG           SEMANTIC
                            ────────
-                           #00843d  Good / Increase
-                           #005a9c  Neutral / Total
+                           #1C6B27  Good / Increase
+                           #1282C6  Neutral / Total
                            #C8353D  Bad / Decrease
 ```

@@ -161,6 +161,14 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 
 ---
 
+
+### 4.8 Text Boxes
+
+| Element | Specification |
+|---|---|
+| Background | `#006A52` |
+| Text Color | `#FFFFFF` |
+
 ## 5. Spacing & Layout
 
 | Token | Value | Usage |

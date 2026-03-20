@@ -154,7 +154,7 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 |------|------|
 | Header text | Arial Bold 11px, `#1282C6` |
 | Header outline | Bottom only |
-| Item text | Arial Regular 11px, `#000000` |
+| Item text | Arial Regular 10px, `#000000` |
 | Outline color | `#1282C6`, weight 1px |
 | Background | `#FFFFFF` |
 
@@ -177,6 +177,14 @@ The **splash colors** are reserved for charts, graphs, and any visual requiring 
 | **Disabled** | `#E6E6E6` | `#BFBFBF` | none |
 
 ---
+
+
+### 4.8 Text Boxes
+
+| Element | Specification |
+|---|---|
+| Background | `#1282C6` |
+| Text Color | `#FFFFFF` |
 
 ## 5. Spacing & Layout
 

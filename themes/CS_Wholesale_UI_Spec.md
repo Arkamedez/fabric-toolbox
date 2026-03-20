@@ -6,12 +6,6 @@
 
 ---
 
-## Document History
-* **v1.1** (March 20, 2026): Expanded semantic colors and conditional formatting guidelines; corrected Good/Neutral indicators.
-* **v1.0** (March 19, 2026): Initial UI design specification.
-
----
-
 ## 1. Corporate Color Palette
 
 ![Corporate Colors](C:/Users/jefft/.gemini/antigravity/brain/ae4be4da-b5d7-46fe-b240-cfe04cf01454/cs_corporate_colors_1773928605227.png)
@@ -240,3 +234,9 @@ The companion Power BI theme JSON implementing this spec is available at:
 | | Neutral | `#BFBFBF` | ![#BFBFBF](https://placehold.co/15x15/BFBFBF/BFBFBF.png) |
 | | Total | `#1282C6` | ![#1282C6](https://placehold.co/15x15/1282C6/1282C6.png) |
 | | Bad / Decrease | `#C8353D` | ![#C8353D](https://placehold.co/15x15/C8353D/C8353D.png) |
+
+---
+
+## Document History
+* **v1.1** (March 20, 2026): Expanded semantic colors and conditional formatting guidelines; corrected Good/Neutral indicators.
+* **v1.0** (March 19, 2026): Initial UI design specification.
